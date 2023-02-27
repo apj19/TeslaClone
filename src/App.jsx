@@ -9,8 +9,10 @@ function App() {
 
   return (
     <div className="font-[Rubik] text-[#393c41] min-w-[375px] max-w-[1440px]">
-      {/* <Header/> */}
+      <Header/>
       <Home/>
+      
+      
       
     </div>
   )
