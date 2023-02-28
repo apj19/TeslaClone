@@ -1,5 +1,6 @@
-import React from 'react'
-import Fade from 'react-reveal/Fade';
+import React from 'react';
+import 'animate.css';
+
 
 
 
@@ -16,26 +17,25 @@ function Section(props) {
     `}  style={{backgroundImage: `url('${imgurl}')`}}
       >
       
-      <Fade bottom>
-        <div className='pt-[15vh] text-center'>
+      
+        <div className='pt-[15vh] text-center animate__animated animate__fadeInUp'>
             <h1 className='text-[40px]'>{props.title}</h1>
             <p className='text-[16px]'>{props.desc}</p>
         </div>
-        </Fade>
-        <div className=' mb-[30px] flex flex-col justify-center items-center'>
+        
+        <div className='  mb-[30px] flex flex-col justify-center items-center'>
             
             <div className='flex flex-col gap-4 md:flex-row md:gap-10 mb-8'>
-            <Fade left>
-                <button className='bg-[#3a3c40]
+          
+                <button className='animate__animated  animate__fadeInLeft bg-[#3a3c40]
                 h-[40px] w-[180px] text-[white]
                 opacity-80  text-[14px] rounded cursor-pointer
                 '>{props.leftBtntext}</button>
-            </Fade>
-            <Fade right>
-                {props.rightBtntext && <button className='bg-[#e6e7e5]
+            
+                {props.rightBtntext && <button className='animate__animated  animate__fadeInRight bg-[#e6e7e5]
                 h-[40px] w-[180px] opacity-80  text-[14px] rounded cursor-pointer
                 '>{props.rightBtntext}</button>}
-              </Fade>  
+              
             </div>
             
             <div className='animate-bounce'>
