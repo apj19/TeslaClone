@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -15,21 +16,22 @@ function Header() {
 
   return (
     <div className='px-[50px] z-10 flex justify-between items-center w-[100%]  fixed top-0'>
-        <a className='flex justify-center items-center h-[40px]' href="#">
-          <img src="/logo.svg" alt="" />
-        </a>
+        <p className='flex justify-center items-center h-[40px]'>
+          <Link to="/"><img src="/logo.svg" alt="" /></Link>
+          
+        </p>
         <ul className='hidden lg:flex gap-4 '>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Model S</li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Model 3</li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Model X</li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2 ' > Model Y</li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '> Solar Roof </li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Solar Panels</li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/Model S">Model S</Link></li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/Model 3">Model 3</Link></li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/Model X">Model X</Link></li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2 ' ><Link to="/Model Y">Model Y</Link> </li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/Solar Roof">Solar Roof</Link>  </li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/Solar Panels">Solar Panels</Link></li>
         </ul>
 
         <ul className='flex gap-4'>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Shop</li>
-          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Account</li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '> <Link to="/shop">Shop</Link> </li>
+          <li className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '><Link to="/account">Account</Link></li>
           <li onClick={changToggel} className='hover:backdrop-opacity-10 hover:backdrop-invert rounded cursor-pointer p-2  '>Menu</li>
           
         </ul>
